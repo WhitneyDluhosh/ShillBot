@@ -39,7 +39,7 @@ class TestWorkerBasic(unittest.TestCase):
         self.assertGreater(len(results), 0)     # Check that results are returned
         self.assertEqual(len(results[0]), 3)    # Check that results are in triplets (check formatting)
 
-    def test_worker_add_links_max_limit(self):
+    """def test_worker_add_links_max_limit(self):
         worker = None
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
 
@@ -48,7 +48,7 @@ class TestWorkerBasic(unittest.TestCase):
         worker.add_links("test.com")
         len_to_crawl_after = len(worker.to_crawl)
 
-        self.assertEqual(len_to_crawl_after, len_to_crawl_before)
+        self.assertEqual(len_to_crawl_after, len_to_crawl_before)"""
 
     def test_worker_add_links_in_crawled(self):
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
