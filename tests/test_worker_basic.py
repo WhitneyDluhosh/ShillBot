@@ -61,7 +61,7 @@ class TestWorkerBasic(unittest.TestCase):
 
 	def test_worker_parsing_test_one(self):
         """
-        Purpose: Test regular parsing mechanisms of worker
+        Purpose: Test regular parsing mechanisms of worker and see if links differ
         Expectation: Load html file, send it to worker to parse, should return list of results
 
         :return:
