@@ -70,10 +70,10 @@ class TestWorkerBasic(unittest.TestCase):
 
         self.assertNotEqual(len_to_crawl_after, len_to_crawl_before)
 		
-    def unittest2(self):
+    def test_worker_unit_test_2(self):
         pass
 		
-    def unittest3(self):
+    def test_worker_unit_test_3(self):
         pass
 		
   
