@@ -59,7 +59,15 @@ class TestWorkerBasic(unittest.TestCase):
 
         self.assertEqual(len_to_crawl_after, len_to_crawl_before)
     def unittest1(self):
-        pass
+        worker = None
+        worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
+
+        worker.max_links = 0
+        len_to_crawl_before = len(worker.to_crawl)
+        worker.add_links("test.com")
+        len_to_crawl_after = len(worker.to_crawl)
+
+        self.assertEqual(len_to_crawl_after, len_to_crawl_before)
     def unittest2(self):
         pass
     def unittest3(self):
