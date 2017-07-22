@@ -59,7 +59,7 @@ class TestWorkerBasic(unittest.TestCase):
 
         self.assertEqual(len_to_crawl_after, len_to_crawl_before)
 
- def test_worker_parsing_test_one(self):
+	def test_worker_parsing_test_one(self):
         """
         Purpose: Test regular parsing mechanisms of worker
         Expectation: Load html file, send it to worker to parse, should return list of results
