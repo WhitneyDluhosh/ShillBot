@@ -90,6 +90,6 @@ class TestWorkerBasic(unittest.TestCase):
 
         text = (str(text).strip().replace('\r\n', ''))
         page_tree = html.fromString(text)
-        if page_tree != null
+        self.assertGreater(os.path.getsize(page_tree), 0)
 		
   
