@@ -70,7 +70,7 @@ class TestWorkerBasic(unittest.TestCase):
 
         self.assertNotEqual(len_to_crawl_after, len_to_crawl_before)
 		
-    def test_worker_parsing(self):
+    def test_worker_parsing_next_page(self):
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
         file_path = '%s/%s' % (os.path.dirname(os.path.realpath(__file__)), 'test_resources/sample_GET_response.html')
 
@@ -79,8 +79,7 @@ class TestWorkerBasic(unittest.TestCase):
 
         results, next_page = worker.parse_text(str(text).strip().replace('\r\n', ''))
 
-        self.assertGreater(len(results), 0)     # Check that results are returned
-        self.assertEqual(len(results[0]), 3)    # Check that results are in triplets (check formatting)
+        self.assertGreater(next_page, 0)     # Check whether next page is greater than 0
 		
     def test_worker_unit_test_3(self):
         pass
