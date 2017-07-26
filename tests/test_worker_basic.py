@@ -59,7 +59,7 @@ class TestWorkerBasic(unittest.TestCase):
 
         self.assertEqual(len_to_crawl_after, len_to_crawl_before)
     
-    def test_worker_add_not_links_max_limit(self):
+    def test_worker_add_isnt_links_max_limit(self):
         worker = None
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
 
@@ -70,8 +70,8 @@ class TestWorkerBasic(unittest.TestCase):
 
         self.assertNotEqual(len_to_crawl_after, len_to_crawl_before)
 		
-    def test_worker_unit_test_2(self):
-        pass
+    def test_worker_add_links_Link_notExistent(self):
+		pass
 		
     def test_worker_unit_test_3(self):
         pass
