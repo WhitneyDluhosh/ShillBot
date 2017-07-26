@@ -89,7 +89,7 @@ class TestWorkerBasic(unittest.TestCase):
             text = f.read()
 
         results, next_page = worker.parse_text(str(text).strip().replace('\r\n', ''))
-        temp = ''.join(item[0] for item in results)
-        self.assertGreater(temp[0].length,0)
-        self.assertGreater(temp[1].length,0)		
-        self.assertGreater(temp[2].length,0) 
+       
+        self.assertGreater(results[0].length,0)
+        self.assertGreater(results[1].length,0)		
+        self.assertGreater(results[2].length,0) 
