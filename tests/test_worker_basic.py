@@ -59,7 +59,7 @@ class TestWorkerBasic(unittest.TestCase):
 
         self.assertEqual(len_to_crawl_after, len_to_crawl_before)
     
-    def test_worker_add_isnt_links_max_limit(self):
+    def test_worker_add_is_links_max_limit(self):
         worker = None
         worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
 
@@ -79,9 +79,9 @@ class TestWorkerBasic(unittest.TestCase):
 
         results, next_page = worker.parse_text(str(text).strip().replace('\r\n', ''))
 
-        self.assertEqual(len(next_page), 0)     # Check whether next page is greater than 0
+        self.assertLess(len(next_page), 0)     # Check whether next page is greater than 0
 		
-    def test_worker_unit_test_3(self):
+    def test_worker_parsing_is_text_null(self):
         pass
 		
   
