@@ -89,7 +89,7 @@ class TestWorkerBasic(unittest.TestCase):
             text = f.read()
 
         text = (str(text).strip().replace('\r\n', ''))
-		page_tree = html.fromString(text)
-		if page_tree == null
+        page_tree = html.fromString(text)
+        if page_tree == null
 		
   
