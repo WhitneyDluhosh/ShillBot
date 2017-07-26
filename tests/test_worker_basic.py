@@ -3,6 +3,7 @@ import unittest
 import codecs
 import os
 
+from lxml import html
 from workers.basic_worker import BasicUserParseWorker
 
 
@@ -89,7 +90,7 @@ class TestWorkerBasic(unittest.TestCase):
             text = f.read()
 
         text = (str(text).strip().replace('\r\n', ''))
-        page_tree = html.fromString(text)
+        page_tree = html.fromstring(text)
         self.assertGreater(os.path.getsize(page_tree), 0)
 		
   
