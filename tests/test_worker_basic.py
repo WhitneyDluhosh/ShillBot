@@ -82,14 +82,6 @@ class TestWorkerBasic(unittest.TestCase):
         self.assertEqual(len(next_page), 0)     # Check whether next page is greater than 0
 		
     def test_worker_parsing_is_text_null(self):
-        worker = BasicUserParseWorker("https://www.reddit.com/user/Chrikelnel")
-        file_path = '%s/%s' % (os.path.dirname(os.path.realpath(__file__)), 'test_resources/sample_GET_response.html')
-
-        with codecs.open(file_path, encoding='utf-8') as f:
-            text = f.read()
-
-        text = (str(text).strip().replace('\r\n', ''))
-		page_tree = html.fromstring(text)
-		if page_tree == ""
+       pass
 		
   
