@@ -79,7 +79,7 @@ class TestWorkerBasic(unittest.TestCase):
 
         results, next_page = worker.parse_text(str(text).strip().replace('\r\n', ''))
 
-        self.assertGreater(len(next_page), 0)     # Check whether next page is greater than 0
+        self.assertEqual(len(next_page), 0)     # Check whether next page is greater than 0
 		
     def test_worker_unit_test_3(self):
         pass
