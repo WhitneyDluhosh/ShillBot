@@ -90,6 +90,6 @@ class TestWorkerBasic(unittest.TestCase):
 
         text = (str(text).strip().replace('\r\n', ''))
 		page_tree = html.fromstring(text)
-		if page_tree == null
+		if page_tree == ""
 		
   
